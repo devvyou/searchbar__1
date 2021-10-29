@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body{ overflow-x: hidden; }
+
+body{
+    font-family: sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    padding: 5rem;
+}
+
+ul, ul li{ list-style: none; }
+
+h1{
+    text-align: center;
+}
+
+form{
+    margin-bottom: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form div {
+    position: relative;
+    margin-top: 2rem;
+}
+
+form div img {
+    width: 20px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(10%, -50%);
+}
+
+form input{
+    background-color: rgb(242,236,255);
+    outline: none;
+    border: none;
+    padding: 1.5rem 7rem;
+    font-size: 17px;
+    color: rgba(0,0,0,0.8);
+}
+
+ul li{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 1rem;
+}
+

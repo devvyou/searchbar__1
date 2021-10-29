@@ -1,0 +1,26 @@
+POST http://localhost:3000/add/product
+Content-Type: application/json
+
+{
+    "productName": "Old product",
+    "productPrice": 100
+}
+
+###
+
+GET http://localhost:3000/products
+
+###
+
+POST http://localhost:3000/updateProduct
+Content-Type: application/json
+
+{
+    "productToUpdate": "Samsung 3",
+    "productName": "Samsung Grand neo 2019'"
+}
+
+
+###
+
+GET http://localhost:3000/products
