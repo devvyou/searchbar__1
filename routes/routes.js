@@ -17,17 +17,28 @@ const { Router } = require('express'),
     Product = model('apple_product', ProductSchema);
 
 router.get('/', (req, res) => {
-    return res.render('index')
+    return res.render('index');
+})
+
+router.post('/add/product', (req, res) => {
+    Product.create(req.body)
+        .then(() => {
+            return res.status(200).send('Created successfully');
+        }).catch(err => {
+            throw new Error(err)
+        })
 })
 
 router.get('/products', (req, res) => {
+
     Product.find({})
         .then(docs => {
-            res.send({ docs })
+            return res.status(200).send({ docs })
         })
         .catch(err => {
             throw new Error(err);
         })
+
 })
 
 router.post('/search', async (req, res) => {
